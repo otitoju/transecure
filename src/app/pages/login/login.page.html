@@ -1,0 +1,20 @@
+
+
+<ion-content class="ion-padding">
+  <h1>Welcome,</h1>
+  <h3>Sign in to continue!</h3>
+  <form>
+    <div class="form-field">
+      <label [ngClass]="focusedEmail ? 'label-focused' : '' " for="email">Email ID</label>
+      <input type="email"  (focus)="focusedEmail = true" (blur)="onBlur($event)"/>
+    </div>
+
+    <div class="form-field">
+      <label [ngClass]="focusedPassword ? 'label-focused' : '' " for="email">Password</label>
+      <input type="password" (focus)="focusedPassword = true" (blur)="onBlurPassword($event)" />
+    </div>
+    <a routerLink="#" class="forgot-password-link">Forgot Password?</a>
+
+    <ion-button (click)="dashboard()" expand="block" class="ion-margin-top" color="primary"> <ion-icon name="log-in-outline"></ion-icon>SIGN IN</ion-button>
+  </form>
+</ion-content>

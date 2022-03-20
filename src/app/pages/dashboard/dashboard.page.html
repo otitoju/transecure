@@ -1,0 +1,82 @@
+
+<ion-content class="bg_image" [style.--background]="scanActive ? '#00000000' : null">
+  <div [hidden]="!scanActive">
+    <div class="scan-box"></div>
+    <ion-button class="scanner-buttons btn" color="danger" size="small" expand="round" (click)="stopScan()">
+      <ion-icon name="stop-circle-outline"></ion-icon
+    >Stop Scan</ion-button>
+  </div>
+  <div [hidden]="scanActive">
+    <h1>Welcome to Motor Verify</h1>
+    <p>We ensure your safety to your destination by allowing you know more about your driver and vehicle.</p>
+    <img src="../../../assets/logos/qrcode.png" class="logo" alt="logo"/>
+    <div>
+      <ion-list>
+        <ion-item>
+          <ion-label>Fullname </ion-label>
+          <ion-label slot="end" color="dark" >John doe</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Address </ion-label>
+          <ion-label slot="end" color="dark" >No 53, wuse zone 3, Abuja.</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Telephone </ion-label>
+          <ion-label slot="end" color="dark" >090635624243</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Model </ion-label>
+          <ion-label slot="end" color="dark" >Toyota camry</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Registration </ion-label>
+          <ion-label slot="end" color="dark" >01-236453</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Plate Number </ion-label>
+          <ion-label slot="end" color="dark" >Kwl Abj 091</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Type </ion-label>
+          <ion-label slot="end" color="dark" >Taxi</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Authorized </ion-label>
+          <ion-label slot="end" color="dark" >Yes</ion-label>
+        </ion-item>
+    </ion-list>
+  
+    <ion-button (click)="startScan()" size="small" class="ion-margin-top" color="secondary"> <ion-icon name="scan-outline" slot="end"></ion-icon>SCAN NOW</ion-button>
+      <!-- <ion-row>
+        <ion-col size="6">
+            <h2 class="CardAlign CheckInLbl">Fullname: </h2>
+            <h2 class="CardAlign CheckInLbl">Address: </h2>
+            <h2 class="CardAlign CheckInLbl">Telephone: </h2>
+            <h2 class="CardAlign CheckInLbl">Model: </h2>
+            <h2 class="CardAlign CheckInLbl">Registration Number: </h2>
+            <h2 class="CardAlign CheckInLbl">Plate Number:</h2>
+            <h2 class="CardAlign CheckInLbl">Type: </h2>
+            <h2 class="CardAlign CheckInLbl">Authorized: </h2>
+        </ion-col>
+        <ion-col size="6">
+          <h2 class="CardAlign CheckInLbl">John Doe </h2>
+          <h2 class="CardAlign CheckInLbl">No 2, wuse Abuja </h2>
+          <h2 class="CardAlign CheckInLbl">09022551182 </h2>
+          <h2 class="CardAlign CheckInLbl">Toyota </h2>
+          <h2 class="CardAlign CheckInLbl">01-236453 </h2>
+          <h2 class="CardAlign CheckInLbl">Kwl Abj 091</h2>
+          <h2 class="CardAlign CheckInLbl">Taxi </h2>
+          <h2 class="CardAlign CheckInLbl">Yes </h2>
+      </ion-col>
+      </ion-row> -->
+  
+    </div>
+  </div>
+</ion-content>

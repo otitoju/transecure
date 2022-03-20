@@ -1,0 +1,57 @@
+.bg_image {
+    --background: url("../../../assets/logos/bg.jpg") no-repeat center center / cover;
+    //opacity: 0.4;
+}
+
+h1 {
+    margin-top: 15%;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+p {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+}
+
+ion-list {
+    background: none;
+
+    ion-item {
+        background: none;
+    }
+}
+
+img {
+    width: 50%;
+    margin: 0px 0px 0px 100px;
+}
+
+ion-button {
+    margin: 0px 0px 0px 150px;
+}
+
+.scan-box {
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
+    content: "";
+    display: block;
+    left: 50%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+
+  .scanner-buttons {
+      margin: 0px;
+      position: absolute;
+      bottom: 100px;
+      height: 50px;
+      z-index: 11;
+  }

@@ -24,3 +24,34 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+    --primary: #1ce5c1;
+    --bg-color: #1b1b20;
+    --bg-light: #EBEBEB;
+    --text-light: #8C8C8C;
+    --white: #fff;
+    --item-bg: #25252b;
+    --transparent: rgba(0, 0, 0, 0);
+    --ion-safe-area-top: 22px;
+    --ion-safe-area-bottom: 22px;
+}
+
+body {
+    margin-top: constant(safe-area-inset-top);
+    margin-top: env(safe-area-inset-top);
+}
+
+@font-face {
+    font-family: Brand-Bold;
+    src: url('./assets/fonts/bolt-semibold.ttf');
+}
+
+@font-face {
+    font-family: Brand-Regular;
+    src: url('./assets/fonts/bolt-regular.ttf');
+}
+
+* {
+    font-family: Brand-Regular;
+}
