@@ -1,0 +1,59 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+         
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="primary">
+      <ion-button color="secondary">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+    <ion-title>Shopping Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="productscreen">
+        <div class="productscreen__left">
+          <div class="left__image">
+            <img src={{product.imageUrl}} alt="" />
+          </div>
+          <div class="left__info">
+            <p class="left__name">{{product.name}}</p>
+            <p>Price: ${{product.price}}</p>
+            <p>Description: {{product.description}}</p>
+          </div>
+        </div>
+        <div class="productscreen__right">
+          <div class="right__info">
+            <p>
+              Price:
+              <span>${{product.price}}</span>
+            </p>
+            <p>
+              Status:
+              <span>
+                In Stock and Out of Stock
+              </span>
+            </p>
+            <p>
+              Qty
+              <select>
+                
+              </select>
+            </p>
+            <p>
+              <button (click)="addToCart()" type="button">
+                Add To Cart
+              </button>
+            </p>
+          </div>
+        </div>
+  </div>
+</ion-content>

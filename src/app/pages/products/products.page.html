@@ -1,0 +1,43 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+         
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="primary">
+      <ion-button color="secondary">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+    <ion-title>Shopping Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="homescreen">
+    <h2 class="homescreen__title">Latest Products</h2>
+    <ion-searchbar showCancelButton="always"></ion-searchbar>
+    <div class="homescreen__products">
+      <div class="product" *ngFor="let product of products">
+        <img src={{product.imageUrl}} alt="" />
+  
+        <div class="product__info">
+          <p class="info__name">{{product.name}}</p>
+  
+          <p class="info__description">{{product.description.substring(0, 100)}}...</p>
+  
+          <p class="info__price">${{product.price}}</p>
+  
+          <a [routerLink]="['/product', product._id]" class="info__button">
+            View
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
